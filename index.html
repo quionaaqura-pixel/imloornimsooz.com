@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>خدمات فناوری IOE</title>
+    <meta name="description" content="ارائه خدمات فناوری اطلاعات، نگهداری سیستم‌ها و پشتیبانی نرم‌افزار">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg: #f6f7f9;
+            --card: #ffffff;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --header: #111827;
+            --link: #2563eb;
+        }
+
+        body.dark {
+            --bg: #0f172a;
+            --card: #111827;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --header: #020617;
+            --link: #60a5fa;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        header {
+            background: var(--header);
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin-left: 18px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .toggle {
+            background: none;
+            border: 1px solid #9ca3af;
+            color: #ffffff;
+            padding: 6px 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--card);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        ul {
+            padding-right: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        a.email {
+            color: var(--link);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#home">خانه</a>
+        <a href="#services">خدمات</a>
+        <a href="#about">درباره ما</a>
+        <a href="#contact">تماس</a>
+    </nav>
+    <button class="toggle" onclick="toggleTheme()">تیره / روشن</button>
+</header>
+
+<section id="home">
+    <h1>خدمات فناوری IOE</h1>
+    <p>
+        خدمات فناوری IOE ارائه‌دهنده راهکارهای ساده و پایدار در حوزه فناوری اطلاعات است.
+        ما به کسب‌وکارهای کوچک و کاربران کمک می‌کنیم تا سیستم‌هایی قابل اطمینان،
+        به‌روز و بدون پیچیدگی داشته باشند.
+    </p>
+</section>
+
+<section id="services">
+    <h2>خدمات ما</h2>
+    <ul>
+        <li>نگهداری و پایش سیستم‌ها</li>
+        <li>مدیریت و پشتیبانی به‌روزرسانی نرم‌افزار</li>
+        <li>راهکارهای مبتنی بر فضای ابری</li>
+        <li>مشاوره و پشتیبانی فنی</li>
+    </ul>
+</section>
+
+<section id="about">
+    <h2>درباره ما</h2>
+    <p>
+        ما یک تیم کوچک و متمرکز هستیم که هدفمان ارائه خدمات فنی قابل اعتماد
+        با رویکردی شفاف و عملی است. تمرکز ما بر کیفیت، پایداری
+        و رضایت بلندمدت کاربران می‌باشد.
+    </p>
+</section>
+
+<section id="contact">
+    <h2>تماس با ما</h2>
+    <p>
+        پشتیبانی فقط از طریق ایمیل انجام می‌شود.
+    </p>
+    <p>
+        ایمیل پشتیبانی:
+        <a class="email" href="mailto:quiozoma@gmail.com">
+            quiozoma@gmail.com
+        </a>
+    </p>
+</section>
+
+<footer>
+    © ۱۴۰۴ – خدمات فناوری IOE
+</footer>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+        localStorage.setItem(
+            "theme",
+            document.body.classList.contains("dark") ? "dark" : "light"
+        );
+    }
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+    }
+</script>
+
+</body>
+</html>
